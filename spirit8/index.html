@@ -271,21 +271,19 @@
 				<i>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</i>
 			</div>
 			<div id="div13">
-				<form acion="sendMail.php" method="POST">
-					<div id="div14">
-						Name <div id="label5">*</div>
-						  <textarea name="sendTo" type="text" id="textbox0"></textarea>
-					</div>
-					<div id="div15">
-						Email Adress <div id="label6">*</div>
-						  <textarea name="theme" type="text" id="textbox1"></textarea>
-					</div>
-					<div id="div16">
-						Message <div id="label7">*</div>
-						 <textarea name="message" type="text" id="textbox2"></textarea>
-						 <button id="button31" type="submit">SEND</button>
-					</div>
-				</form>
+				<div id="div14">
+					Name <div id="label5">*</div>
+					  <textarea type="text" id="textbox0"></textarea>
+				</div>
+				<div id="div15">
+					Email Adress <div id="label6">*</div>
+					  <textarea type="text" id="textbox1"></textarea>
+				</div>
+				<div id="div16">
+					Message <div id="label7">*</div>
+					 <textarea type="text" id="textbox2"></textarea>
+					 <button id="button31" onclick="SendMail();">SEND</button>
+				</div>
 			</div>
 		</div>
 		<div id="screen8">
@@ -314,11 +312,8 @@
 		function SendMail()
 		{
 			var xhr = new XMLHttpRequest();
-			xhr.open('POST', '/sendMail.php', false);
-			var message = "sendTo=mr.vlad.naumov.1980@mail.ru";
-			message += '&theme=Новый заказ';
-			message += '&message=Имя клиента: ' + document.getElementById('textbox0').value;
-			xhr.send(message);
+			xhr.open('GET', '/sendMail.php?sendTo=mr.vlad.naumov.1980@mail.ru&theme=' + encodeURIComponent('Новый заказ') + '&message=' + encodeURIComponent(document.getElementById('textbox0').value), false);
+			xhr.send();
 		}
 	</script>
 </html>
