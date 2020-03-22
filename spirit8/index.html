@@ -315,7 +315,7 @@
 			xhr.open('POST', '/sendMail', false);
 			var message = "sendTo=mr.vlad.naumov.1980@mail.ru";
 			message += '&theme=Новый заказ';
-			message += '&message=Имя клиента: ' + document.getElementById('textbox0').value + '\nПочта клинта: ' + document.getElementById('textbox1').value + '\nСообщение: ' + document.getElementById('textbox2').value;
+			message += '&message=Имя клиента: ' + document.getElementById('textbox0').value;
 			xhr.send(message);
 		}
 	</script>
