@@ -271,19 +271,21 @@
 				<i>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</i>
 			</div>
 			<div id="div13">
-				<div id="div14">
-					Name <div id="label5">*</div>
-					  <textarea type="text" id="textbox0"></textarea>
-				</div>
-				<div id="div15">
-					Email Adress <div id="label6">*</div>
-					  <textarea type="text" id="textbox1"></textarea>
-				</div>
-				<div id="div16">
-					Message <div id="label7">*</div>
-					 <textarea type="text" id="textbox2"></textarea>
-					 <button id="button31" onclick="SendMail();">SEND</button>
-				</div>
+				<form acion="sendMail.php" method="POST">
+					<div id="div14">
+						Name <div id="label5">*</div>
+						  <textarea name="sendTo" type="text" id="textbox0"></textarea>
+					</div>
+					<div id="div15">
+						Email Adress <div id="label6">*</div>
+						  <textarea name="theme" type="text" id="textbox1"></textarea>
+					</div>
+					<div id="div16">
+						Message <div id="label7">*</div>
+						 <textarea name="message" type="text" id="textbox2"></textarea>
+						 <button id="button31" type="submit">SEND</button>
+					</div>
+				</form>
 			</div>
 		</div>
 		<div id="screen8">
