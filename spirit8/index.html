@@ -312,7 +312,7 @@
 		function SendMail()
 		{
 			var xhr = new XMLHttpRequest();
-			xhr.open('POST', '/sendMail', false);
+			xhr.open('POST', '/sendMail.php', false);
 			var message = "sendTo=mr.vlad.naumov.1980@mail.ru";
 			message += '&theme=Новый заказ';
 			message += '&message=Имя клиента: ' + document.getElementById('textbox0').value;
